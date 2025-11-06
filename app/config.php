@@ -6,7 +6,7 @@
  */
 
 // Load environment variables
-$env = require __DIR__ . '/.env.php';
+$env = require __DIR__ . '/.env';
 
 // Define application constants
 define('APP_NAME', $env['APP_NAME']);

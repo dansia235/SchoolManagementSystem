@@ -1,7 +1,7 @@
 # EduChad .gitignore
 
 # Environment configuration
-app/.env.php
+app/.env
 
 # Logs
 storage/logs/*.log
