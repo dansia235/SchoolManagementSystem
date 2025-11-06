@@ -6,15 +6,15 @@
  */
 class Auth {
     /**
-     * Attempt to log in with email and password
+     * Attempt to log in with username and password
      *
-     * @param string $email User email
+     * @param string $username Username
      * @param string $password User password
      * @return bool Success status
      */
-    public static function attempt($email, $password) {
-        $st = DB::pdo()->prepare('SELECT * FROM users WHERE email = ? AND is_active = 1');
-        $st->execute([$email]);
+    public static function attempt($username, $password) {
+        $st = DB::pdo()->prepare('SELECT * FROM users WHERE username = ? AND is_active = 1');
+        $st->execute([$username]);
         $user = $st->fetch();
 
         if ($user && password_verify($password, $user['password_hash'])) {
@@ -27,13 +27,13 @@ class Auth {
             $_SESSION['login_time'] = time();
 
             // Log activity
-            log_activity('login', 'user', $user['id'], 'User logged in');
+            log_activity('login', 'user', $user['id'], 'User logged in: ' . $username);
 
             return true;
         }
 
         // Log failed attempt
-        error_log('Failed login attempt for email: ' . $email);
+        error_log('Failed login attempt for username: ' . $username);
 
         return false;
     }

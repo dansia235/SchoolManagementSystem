@@ -13,14 +13,14 @@ class AuthController {
         }
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $email = $_POST['email'] ?? '';
+            $username = $_POST['username'] ?? '';
             $password = $_POST['password'] ?? '';
 
-            if (Auth::attempt($email, $password)) {
+            if (Auth::attempt($username, $password)) {
                 flash('success', 'Bienvenue !');
                 redirect('dashboard');
             } else {
-                flash('error', 'Email ou mot de passe incorrect.');
+                flash('error', 'Nom d\'utilisateur ou mot de passe incorrect.');
             }
         }
 
