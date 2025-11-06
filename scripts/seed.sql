@@ -1,13 +1,13 @@
 -- EduChad Seed Data
 -- This file populates the database with initial data for testing and demonstration
 
--- Insert default admin user
--- Password: Admin@123 (must be changed on first login)
-INSERT INTO users(name, email, password_hash, role, is_active) VALUES
-('Administrateur Principal', 'admin@educhad.local', '$2y$10$9x7e1x3vGm2a8tKJr9PjHeoYl3Yk3Q8mC7sG1zV9o5r1oNw0JrLmi', 'ADMIN', 1),
-('Caissier Principal', 'cashier@educhad.local', '$2y$10$9x7e1x3vGm2a8tKJr9PjHeoYl3Yk3Q8mC7sG1zV9o5r1oNw0JrLmi', 'CASHIER', 1),
-('Enseignant Test', 'teacher@educhad.local', '$2y$10$9x7e1x3vGm2a8tKJr9PjHeoYl3Yk3Q8mC7sG1zV9o5r1oNw0JrLmi', 'TEACHER', 1),
-('Observateur', 'viewer@educhad.local', '$2y$10$9x7e1x3vGm2a8tKJr9PjHeoYl3Yk3Q8mC7sG1zV9o5r1oNw0JrLmi', 'VIEWER', 1);
+-- Insert default users
+-- Password for all: admin123 (simple and easy to remember)
+INSERT INTO users(username, name, email, password_hash, role, is_active) VALUES
+('admin', 'Administrateur Principal', 'admin@educhad.local', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'ADMIN', 1),
+('enseignant', 'Enseignant Principal', 'teacher@educhad.local', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'TEACHER', 1),
+('caissier', 'Caissier Principal', 'cashier@educhad.local', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'CASHIER', 1),
+('observateur', 'Observateur', 'viewer@educhad.local', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'VIEWER', 1);
 
 -- Insert classes (from 6ème to Terminale)
 INSERT INTO classes(name, level, capacity, is_active) VALUES
