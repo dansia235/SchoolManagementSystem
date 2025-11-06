@@ -6,7 +6,8 @@
 INSERT INTO users(name, email, password_hash, role, is_active) VALUES
 ('Administrateur Principal', 'admin@educhad.local', '$2y$10$9x7e1x3vGm2a8tKJr9PjHeoYl3Yk3Q8mC7sG1zV9o5r1oNw0JrLmi', 'ADMIN', 1),
 ('Caissier Principal', 'cashier@educhad.local', '$2y$10$9x7e1x3vGm2a8tKJr9PjHeoYl3Yk3Q8mC7sG1zV9o5r1oNw0JrLmi', 'CASHIER', 1),
-('Enseignant Test', 'teacher@educhad.local', '$2y$10$9x7e1x3vGm2a8tKJr9PjHeoYl3Yk3Q8mC7sG1zV9o5r1oNw0JrLmi', 'TEACHER', 1);
+('Enseignant Test', 'teacher@educhad.local', '$2y$10$9x7e1x3vGm2a8tKJr9PjHeoYl3Yk3Q8mC7sG1zV9o5r1oNw0JrLmi', 'TEACHER', 1),
+('Observateur', 'viewer@educhad.local', '$2y$10$9x7e1x3vGm2a8tKJr9PjHeoYl3Yk3Q8mC7sG1zV9o5r1oNw0JrLmi', 'VIEWER', 1);
 
 -- Insert classes (from 6ème to Terminale)
 INSERT INTO classes(name, level, capacity, is_active) VALUES
