@@ -1,0 +1,45 @@
+# EduChad .gitignore
+
+# Environment configuration
+app/.env.php
+
+# Logs
+storage/logs/*.log
+storage/logs/*.txt
+
+# Exports
+storage/exports/*
+!storage/exports/.gitkeep
+
+# Uploads
+public/uploads/*
+!public/uploads/.gitkeep
+!public/uploads/logos/.gitkeep
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Composer
+/vendor/
+composer.lock
+
+# Node modules (if using npm)
+node_modules/
+package-lock.json
+
+# License generated files
+scripts/license_*.txt
+
+# Temporary files
+*.tmp
+*.bak
+*.cache
